@@ -1,15 +1,15 @@
 import Image from 'next/image';
 import React from 'react';
-// import { Clock3, Flame, Star } from "lucide-react";
+import { Clock3, Flame, Star } from "lucide-react";
 
 const AppCard = ({ app }) => {
     return (
         <section className='bg-[#15171D]  '>
             <div>
-                <div className="w-full max-w-sm overflow-hidden rounded-2xl  bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+                <div className="w-full max-w-sm overflow-hidden rounded-2xl  bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl ">
 
                     {/* Image */}
-                    <div className="relative h-52 overflow-hidden">
+                    <div className="relative h-52 ">
                         <Image
                             src={app.image}
                             alt={app.name}
@@ -58,40 +58,41 @@ const AppCard = ({ app }) => {
 
                         {/* Exercise Info */}
                         <div className="mt-5 grid grid-cols-3 gap-2 ">
-                            <div className="text-center">
-
-                                <p className="mt-1 font-semibold text-gray-200">
-                                    {app.duration} min
-                                </p>
+                            <div className="flex items-center gap-2">
+                                <Clock3 className="w-5 h-5 text-yellow-400" />
+                                <span>{app.duration} min</span>
                             </div>
 
-                            <div >
 
-                                <p className="mt-1 font-semibold text-gray-200">
-                                    
-                                    {app.caloriesBurned} kcal
-                                </p>
 
+                            <div className="flex items-center gap-2" >
+
+                                <Flame className="w-5 h-5 text-yellow-400" />
+                                <span> {app.caloriesBurned} kcal</span>
                             </div>
-                            <div>
-                                <p >
-                                    {app.rating}
-                                </p>
+                            <div className="flex items-center gap-2">
+                                <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
+                                <span> {app.rating}</span>
                             </div>
 
 
                         </div>
-
-
-
-
-
-
                     </div>
                 </div>
-            </div>
-        </section>
+            </div >
+        </section >
     );
 };
 
 export default AppCard;
+
+
+
+
+
+
+
+
+
+
+

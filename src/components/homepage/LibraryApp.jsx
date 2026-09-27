@@ -20,7 +20,7 @@ const LibraryApp = async () => {
             </div>
 
             {/* display card data */}
-            <div className='mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 '>
+            <div className=' rounded-2xl mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-3 '>
                 {data.map((app, ind) => {
                     return (
                         <AppCard key={ind} app={app} />
