@@ -1,6 +1,7 @@
 import Banner from "@/components/homepage/Banner";
 import LibraryApp from "@/components/homepage/LibraryApp";
 import Image from "next/image";
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       </nav>
       <Banner />
       <LibraryApp />
+      <Footer />
     </div>
   );
 }
