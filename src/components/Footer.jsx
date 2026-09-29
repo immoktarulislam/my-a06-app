@@ -9,7 +9,10 @@ const footer = () => {
                 <Image src={footerImg} alt='lastImag' />
                 <h2>FITLOG</h2>
             </div>
-
+            {/* right side */}
+            <div>
+                <h2>© 2026 FitLog — Workout Library. Train hard, log honest</h2>
+            </div>
         </div>
     );
 };
